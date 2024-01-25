@@ -1,0 +1,38 @@
+configuration:
+  swagger:
+    app: "Auth Service"
+    description: "Service for the social app"
+
+  jwt:
+    secret: "${JWT_SECRET}"
+
+  security:
+    salt: "${SECURITY_SALT}"
+
+spring:
+  config:
+    import: file:env.properties
+
+  mail:
+    host: "${MAIL_HOST}"
+    port: "${MAIL_PORT}"
+    username: "${MAIL_USER}"
+    password: "${MAIL_PASS}"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  data:
+    mongodb:
+      database: "${MONGODB_DB}"
+      uri: "${MONGODB_ATLAS}"
+  application:
+    name: auth-service
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+server:
+  port: 8081
