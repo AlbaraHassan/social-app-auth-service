@@ -42,8 +42,6 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: https://app-reg.onrender.com/eureka/
-    eureka-server-connect-timeout-seconds: 0
-    eureka-server-read-timeout-seconds: 0
 
 
 

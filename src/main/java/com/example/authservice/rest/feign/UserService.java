@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@FeignClient(name = "USER-SERVICE", path = "/api/user")
+@FeignClient(name = "USER-SERVICE", path = "/api/user", url = "https://user-service-ejol.onrender.com")
 public interface UserService {
 
   @GetMapping("/all")
