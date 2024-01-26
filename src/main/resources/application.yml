@@ -11,7 +11,7 @@ configuration:
 
 spring:
   config:
-    import: optional:file:.env[.properties]
+    import: file:env.properties
 
   mail:
     host: "${MAIL_HOST}"
