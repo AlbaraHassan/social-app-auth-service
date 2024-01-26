@@ -44,5 +44,13 @@ eureka:
       defaultZone: https://app-reg.onrender.com/eureka/
 
 
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+
 server:
   port: 8081
